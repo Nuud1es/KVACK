@@ -1,0 +1,58 @@
+name: LLM evals
+
+# Runs the live evals (real LLM, real embeddings, real Qdrant) on the self-hosted runner that sits
+# next to the LLM on the Linux machine. It fails the build if a score drops against the recorded
+# baselines in evals/results, and logs the release's scores to Langfuse.
+#
+# SECURITY: this job can reach the LLM and the internal services, so it must never run code from a
+# fork. It therefore triggers only on pushes to main and manual dispatch, never on pull_request.
+# Keep the repository private, or set Settings > Actions > "Require approval for all outside
+# collaborators", and use a runner group limited to this repository.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: llm-evals # one run at a time: the LLM serves a single request at once
+  cancel-in-progress: false
+
+jobs:
+  evals:
+    if: github.event.repository.fork == false
+    runs-on: [self-hosted, linux, llm]
+    timeout-minutes: 120
+    env:
+      QACOPILOT_LLM_BASE_URL: ${{ secrets.QACOPILOT_LLM_BASE_URL }}
+      QACOPILOT_LLM_API_KEY: ${{ secrets.QACOPILOT_LLM_API_KEY }}
+      QACOPILOT_LLM_MODEL: ${{ secrets.QACOPILOT_LLM_MODEL }}
+      QACOPILOT_QDRANT_URL: http://localhost:6333
+      # run_answers.py seeds a throwaway schema here for the table/check questions (real tables untouched)
+      QACOPILOT_DATABASE_URL: ${{ secrets.QACOPILOT_DATABASE_URL }}
+      QACOPILOT_LANGFUSE_HOST: http://localhost:3000
+      QACOPILOT_LANGFUSE_PUBLIC_KEY: ${{ secrets.QACOPILOT_LANGFUSE_PUBLIC_KEY }}
+      QACOPILOT_LANGFUSE_SECRET_KEY: ${{ secrets.QACOPILOT_LANGFUSE_SECRET_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m venv .venv
+      - run: .venv/bin/pip install -q -e "packages/qacopilot[dev,tracing,ingest,retrieval,db,agent]" -e "services/api[dev]"
+      # Tolerances allow for the LLM's small run-to-run variation; retrieval itself is deterministic.
+      - name: Retrieval
+        run: .venv/bin/python evals/run_retrieval.py --name ci --rerank --check evals/results/rerank_v2.json --tolerance 0.02
+      - name: Answers (correctness, citations, refusals)
+        run: .venv/bin/python evals/run_answers.py --name ci --check evals/results/answers_v3.json --tolerance 0.05
+      - name: Extraction
+        run: .venv/bin/python evals/run_extraction.py --name ci --check evals/results/extraction_v2.json --tolerance 0.03
+      - name: Faithfulness and relevance (LLM-judged)
+        run: .venv/bin/python evals/run_judge.py --answers ci --name ci --check evals/results/judge_v3.json --tolerance 0.08
+      - name: Log release scores to Langfuse
+        if: github.event_name == 'push'
+        run: .venv/bin/python evals/log_to_langfuse.py --ci --release "${GITHUB_REF_NAME}-${GITHUB_SHA::7}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-results
+          path: evals/results/*ci*.json

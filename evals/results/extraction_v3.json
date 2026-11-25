@@ -1,0 +1,215 @@
+{
+  "prompt_version": "extract_v3",
+  "accuracy": 1.0,
+  "items": [
+    {
+      "file": "calibration_cert_probe.pdf",
+      "extracted": {
+        "instrument_serial": "TP-20931",
+        "instrument_description": "Digital probe thermometer",
+        "certificate_number": "CAL-2026-0412",
+        "calibrated_by": null,
+        "calibration_date": "2026-03-14",
+        "next_due": "2027-03-14",
+        "result": "pass"
+      },
+      "matched": 6,
+      "total": 6,
+      "misses": []
+    },
+    {
+      "file": "calibration_cert_probe_scanned.pdf",
+      "extracted": {
+        "instrument_serial": "TP-20931",
+        "instrument_description": "Digital probe thermometer",
+        "certificate_number": "CAL-2026-0412",
+        "calibrated_by": null,
+        "calibration_date": "2026-03-14",
+        "next_due": "2027-03-14",
+        "result": "pass"
+      },
+      "matched": 6,
+      "total": 6,
+      "misses": []
+    },
+    {
+      "file": "calibration_cert_probe_2.pdf",
+      "extracted": {
+        "instrument_serial": "TP-20944",
+        "instrument_description": "Digital probe thermometer",
+        "certificate_number": "CAL-2026-0455",
+        "calibrated_by": null,
+        "calibration_date": "2026-04-02",
+        "next_due": "2027-04-02",
+        "result": "pass"
+      },
+      "matched": 5,
+      "total": 5,
+      "misses": []
+    },
+    {
+      "file": "calibration_cert_scale.pdf",
+      "extracted": {
+        "instrument_serial": "SC-77120",
+        "instrument_description": "Bench scale 6kg",
+        "certificate_number": "CAL-2026-0501",
+        "calibrated_by": null,
+        "calibration_date": "2026-05-02",
+        "next_due": "2027-05-02",
+        "result": "pass"
+      },
+      "matched": 6,
+      "total": 6,
+      "misses": []
+    },
+    {
+      "file": "calibration_cert_metal_detector.pdf",
+      "extracted": {
+        "instrument_serial": "MD-5521",
+        "instrument_description": "Metal detector head, line 2",
+        "certificate_number": "CAL-2026-0533",
+        "calibrated_by": null,
+        "calibration_date": "2026-06-11",
+        "next_due": "2027-06-11",
+        "result": "pass"
+      },
+      "matched": 6,
+      "total": 6,
+      "misses": []
+    },
+    {
+      "file": "coa_duck_breast.pdf",
+      "extracted": {
+        "product": "Duck breast fillet",
+        "batch": "B2611-07",
+        "report_date": null,
+        "lab": null,
+        "results": [
+          {
+            "test": "Total viable count",
+            "result": "2.2E+03",
+            "unit": "cfu/g",
+            "limit": "< 1.0E+05 cfu/g"
+          },
+          {
+            "test": "Enterobacteriaceae",
+            "result": "<10",
+            "unit": "cfu/g",
+            "limit": "< 1.0E+03 cfu/g"
+          },
+          {
+            "test": "Salmonella",
+            "result": "Not detected in 25g",
+            "unit": null,
+            "limit": null
+          }
+        ]
+      },
+      "matched": 5,
+      "total": 5,
+      "misses": []
+    },
+    {
+      "file": "coa_duck_breast_b2612.pdf",
+      "extracted": {
+        "product": "Duck breast fillet",
+        "batch": "B2612-03",
+        "report_date": null,
+        "lab": null,
+        "results": [
+          {
+            "test": "Total viable count",
+            "result": "8.4E+04 cfu/g",
+            "unit": null,
+            "limit": "< 1.0E+05 cfu/g"
+          },
+          {
+            "test": "Enterobacteriaceae",
+            "result": "<10 cfu/g",
+            "unit": null,
+            "limit": "< 1.0E+03 cfu/g"
+          },
+          {
+            "test": "Salmonella",
+            "result": "Not detected in 25g",
+            "unit": null,
+            "limit": null
+          }
+        ]
+      },
+      "matched": 5,
+      "total": 5,
+      "misses": []
+    },
+    {
+      "file": "supplier_spec_duck_breast.pdf",
+      "extracted": {
+        "supplier": "Example Poultry Ltd",
+        "product": "Duck breast fillet skin on",
+        "product_code": "4051234",
+        "shelf_life": "14 days from pack date",
+        "storage": "0C to 4C",
+        "allergens": [],
+        "micro_limits": [
+          {
+            "test": "Total viable count",
+            "limit": "1.0E+05 cfu/g"
+          },
+          {
+            "test": "Enterobacteriaceae",
+            "limit": "1.0E+03 cfu/g"
+          },
+          {
+            "test": "Salmonella",
+            "limit": "Not detected in 25g"
+          },
+          {
+            "test": "Listeria monocytogenes",
+            "limit": "Not detected in 25g"
+          }
+        ]
+      },
+      "matched": 10,
+      "total": 10,
+      "misses": []
+    },
+    {
+      "file": "supplier_spec_gravy.pdf",
+      "extracted": {
+        "supplier": "Example Sauces Ltd",
+        "product": "Beef gravy",
+        "product_code": null,
+        "shelf_life": "18 months from manufacture",
+        "storage": "ambient",
+        "allergens": [
+          "celery",
+          "wheat"
+        ],
+        "micro_limits": []
+      },
+      "matched": 5,
+      "total": 5,
+      "misses": []
+    },
+    {
+      "file": "supplier_spec_sauce.pdf",
+      "extracted": {
+        "supplier": "Example Sauces Ltd",
+        "product": "Orange sauce",
+        "product_code": null,
+        "shelf_life": "12 months",
+        "storage": "ambient",
+        "allergens": [],
+        "micro_limits": [
+          {
+            "test": "TVC",
+            "limit": "< 1000 cfu/g"
+          }
+        ]
+      },
+      "matched": 6,
+      "total": 6,
+      "misses": []
+    }
+  ]
+}

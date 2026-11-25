@@ -1,0 +1,35 @@
+[
+  {
+    "coa": "coa_duck_breast.pdf",
+    "spec": "supplier_spec_duck_breast.pdf",
+    "overall": "review",
+    "verdicts": {
+      "Total viable count": "pass",
+      "Enterobacteriaceae": "pass",
+      "Salmonella": "pass",
+      "Listeria monocytogenes": "review"
+    }
+  },
+  {
+    "coa": "coa_duck_breast_b2612.pdf",
+    "spec": "supplier_spec_duck_breast.pdf",
+    "overall": "review",
+    "verdicts": {
+      "Total viable count": "pass",
+      "Enterobacteriaceae": "pass",
+      "Salmonella": "pass",
+      "Listeria monocytogenes": "review"
+    }
+  },
+  {
+    "coa": "coa_duck_breast_b2613.pdf",
+    "spec": "supplier_spec_duck_breast.pdf",
+    "overall": "fail",
+    "verdicts": {
+      "Total viable count": "fail",
+      "Enterobacteriaceae": "pass",
+      "Salmonella": "pass",
+      "Listeria monocytogenes": "pass"
+    }
+  }
+]

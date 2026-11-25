@@ -1,0 +1,30 @@
+# Supporting services. Run on whichever host has Docker (the Linux machine).
+# Langfuse is deployed separately from its own docker-compose.
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: qacopilot
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+      POSTGRES_DB: qacopilot
+    ports: ["5432:5432"]
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U qacopilot"]
+      interval: 5s
+      retries: 10
+    restart: unless-stopped
+
+  qdrant:
+    image: qdrant/qdrant:v1.12.4
+    ports: ["6333:6333"]
+    volumes: ["qdrant:/qdrant/storage"]
+    # Qdrant keeps many segment files open; with Docker's default of 1024 a large upload batch
+    # ran it out of file handles and it stopped accepting writes ("Too many open files").
+    ulimits:
+      nofile: {soft: 65536, hard: 65536}
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  qdrant:

@@ -1,0 +1,235 @@
+{
+  "set": "real",
+  "prompt_version": "classify_v1",
+  "min_confidence": 0.7,
+  "n": 22,
+  "accuracy": {
+    "rules": 1.0,
+    "llm": 0.909,
+    "hybrid": 1.0
+  },
+  "flagged_for_review": 1,
+  "llm_asked_in_hybrid": 7,
+  "items": [
+    {
+      "id": "r01",
+      "truth": "calibration_cert",
+      "rules": "calibration_cert",
+      "rules_confidence": 0.5,
+      "llm": "calibration_cert",
+      "hybrid": "calibration_cert",
+      "flagged": false,
+      "llm_seconds": 5.5
+    },
+    {
+      "id": "r02",
+      "truth": "calibration_cert",
+      "rules": "calibration_cert",
+      "rules_confidence": 1.0,
+      "llm": "calibration_cert",
+      "hybrid": "calibration_cert",
+      "flagged": false,
+      "llm_seconds": 6.3
+    },
+    {
+      "id": "r03",
+      "truth": "calibration_cert",
+      "rules": "calibration_cert",
+      "rules_confidence": 1.0,
+      "llm": "calibration_cert",
+      "hybrid": "calibration_cert",
+      "flagged": false,
+      "llm_seconds": 4.9
+    },
+    {
+      "id": "r04",
+      "truth": "calibration_cert",
+      "rules": "calibration_cert",
+      "rules_confidence": 0.75,
+      "llm": "calibration_cert",
+      "hybrid": "calibration_cert",
+      "flagged": false,
+      "llm_seconds": 5.3
+    },
+    {
+      "id": "r05",
+      "truth": "calibration_cert",
+      "rules": "calibration_cert",
+      "rules_confidence": 1.0,
+      "llm": "calibration_cert",
+      "hybrid": "calibration_cert",
+      "flagged": false,
+      "llm_seconds": 7.8
+    },
+    {
+      "id": "r06",
+      "truth": "coa",
+      "rules": "coa",
+      "rules_confidence": 0.88,
+      "llm": "coa",
+      "hybrid": "coa",
+      "flagged": false,
+      "llm_seconds": 5.7
+    },
+    {
+      "id": "r07",
+      "truth": "coa",
+      "rules": "coa",
+      "rules_confidence": 0.75,
+      "llm": "coa",
+      "hybrid": "coa",
+      "flagged": false,
+      "llm_seconds": 6.1
+    },
+    {
+      "id": "r08",
+      "truth": "coa",
+      "rules": "coa",
+      "rules_confidence": 0.88,
+      "llm": "coa",
+      "hybrid": "coa",
+      "flagged": false,
+      "llm_seconds": 4.6
+    },
+    {
+      "id": "r09",
+      "truth": "supplier_spec",
+      "rules": "supplier_spec",
+      "rules_confidence": 0.6,
+      "llm": "supplier_spec",
+      "hybrid": "supplier_spec",
+      "flagged": false,
+      "llm_seconds": 4.5
+    },
+    {
+      "id": "r10",
+      "truth": "supplier_spec",
+      "rules": "supplier_spec",
+      "rules_confidence": 0.8,
+      "llm": "supplier_spec",
+      "hybrid": "supplier_spec",
+      "flagged": false,
+      "llm_seconds": 7.6
+    },
+    {
+      "id": "r11",
+      "truth": "supplier_spec",
+      "rules": "supplier_spec",
+      "rules_confidence": 0.6,
+      "llm": "supplier_spec",
+      "hybrid": "supplier_spec",
+      "flagged": false,
+      "llm_seconds": 6.9
+    },
+    {
+      "id": "r12",
+      "truth": "customer_cop",
+      "rules": "customer_cop",
+      "rules_confidence": 1.0,
+      "llm": "customer_cop",
+      "hybrid": "customer_cop",
+      "flagged": false,
+      "llm_seconds": 17.1
+    },
+    {
+      "id": "r13",
+      "truth": "customer_cop",
+      "rules": "customer_cop",
+      "rules_confidence": 1.0,
+      "llm": "sop",
+      "hybrid": "customer_cop",
+      "flagged": false,
+      "llm_seconds": 23.0
+    },
+    {
+      "id": "r14",
+      "truth": "haccp",
+      "rules": "haccp",
+      "rules_confidence": 1.0,
+      "llm": "haccp",
+      "hybrid": "haccp",
+      "flagged": false,
+      "llm_seconds": 11.0
+    },
+    {
+      "id": "r15",
+      "truth": "haccp",
+      "rules": "haccp",
+      "rules_confidence": 1.0,
+      "llm": "haccp",
+      "hybrid": "haccp",
+      "flagged": false,
+      "llm_seconds": 8.5
+    },
+    {
+      "id": "r16",
+      "truth": "haccp",
+      "rules": "haccp",
+      "rules_confidence": 0.67,
+      "llm": "sop",
+      "hybrid": "haccp",
+      "flagged": true,
+      "llm_seconds": 12.4
+    },
+    {
+      "id": "r17",
+      "truth": "audit_cert",
+      "rules": "audit_cert",
+      "rules_confidence": 1.0,
+      "llm": "audit_cert",
+      "hybrid": "audit_cert",
+      "flagged": false,
+      "llm_seconds": 4.5
+    },
+    {
+      "id": "r18",
+      "truth": "audit_cert",
+      "rules": "audit_cert",
+      "rules_confidence": 1.0,
+      "llm": "audit_cert",
+      "hybrid": "audit_cert",
+      "flagged": false,
+      "llm_seconds": 7.6
+    },
+    {
+      "id": "r19",
+      "truth": "other",
+      "rules": "other",
+      "rules_confidence": 0.0,
+      "llm": "other",
+      "hybrid": "other",
+      "flagged": false,
+      "llm_seconds": 6.3
+    },
+    {
+      "id": "r20",
+      "truth": "other",
+      "rules": "other",
+      "rules_confidence": 0.0,
+      "llm": "other",
+      "hybrid": "other",
+      "flagged": false,
+      "llm_seconds": 8.8
+    },
+    {
+      "id": "r21",
+      "truth": "customer_cop",
+      "rules": "customer_cop",
+      "rules_confidence": 1.0,
+      "llm": "customer_cop",
+      "hybrid": "customer_cop",
+      "flagged": false,
+      "llm_seconds": 21.5
+    },
+    {
+      "id": "r22",
+      "truth": "other",
+      "rules": "other",
+      "rules_confidence": 0.0,
+      "llm": "other",
+      "hybrid": "other",
+      "flagged": false,
+      "llm_seconds": 7.2
+    }
+  ]
+}

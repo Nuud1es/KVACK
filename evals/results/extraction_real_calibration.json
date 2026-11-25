@@ -1,0 +1,62 @@
+{
+  "limit_per_file": 100,
+  "files": [
+    {
+      "file": "f01",
+      "pages": 1,
+      "read": 1,
+      "failed": 0,
+      "distinct_serials": 1,
+      "with_next_due": 0,
+      "with_warnings": 1,
+      "plausible_dates": 0,
+      "seconds_per_certificate": 2.6
+    },
+    {
+      "file": "f02",
+      "pages": 2,
+      "read": 1,
+      "failed": 0,
+      "distinct_serials": 1,
+      "with_next_due": 1,
+      "with_warnings": 0,
+      "plausible_dates": 1,
+      "seconds_per_certificate": 1.4
+    },
+    {
+      "file": "f03",
+      "pages": 30,
+      "read": 29,
+      "failed": 0,
+      "distinct_serials": 29,
+      "with_next_due": 0,
+      "with_warnings": 29,
+      "plausible_dates": 0,
+      "seconds_per_certificate": 1.3
+    },
+    {
+      "file": "f04",
+      "pages": 9,
+      "read": 9,
+      "failed": 0,
+      "distinct_serials": 9,
+      "with_next_due": 9,
+      "with_warnings": 0,
+      "plausible_dates": 9,
+      "seconds_per_certificate": 1.3
+    },
+    {
+      "file": "f05",
+      "pages": 19,
+      "read": 19,
+      "failed": 0,
+      "distinct_serials": 19,
+      "with_next_due": 19,
+      "with_warnings": 0,
+      "plausible_dates": 19,
+      "seconds_per_certificate": 1.6
+    }
+  ],
+  "certificates_attempted": 59,
+  "certificates_read": 59
+}

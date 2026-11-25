@@ -1,0 +1,133 @@
+[
+  {
+    "file": "calibration_cert_probe.pdf",
+    "doc_type": "calibration_cert",
+    "fields": {
+      "instrument_serial": "TP-20931",
+      "calibration_date": "2026-03-14",
+      "next_due": "2027-03-14",
+      "result": "pass",
+      "certificate_number": "CAL-2026-0412",
+      "instrument_description": "Digital probe thermometer"
+    }
+  },
+  {
+    "file": "calibration_cert_probe_scanned.pdf",
+    "doc_type": "calibration_cert",
+    "fields": {
+      "instrument_serial": "TP-20931",
+      "calibration_date": "2026-03-14",
+      "next_due": "2027-03-14",
+      "result": "pass",
+      "certificate_number": "CAL-2026-0412",
+      "instrument_description": "Digital probe thermometer"
+    }
+  },
+  {
+    "file": "calibration_cert_probe_2.pdf",
+    "doc_type": "calibration_cert",
+    "fields": {
+      "instrument_serial": "TP-20944",
+      "calibration_date": "2026-04-02",
+      "next_due": "2027-04-02",
+      "result": "pass",
+      "certificate_number": "CAL-2026-0455"
+    }
+  },
+  {
+    "file": "calibration_cert_scale.pdf",
+    "doc_type": "calibration_cert",
+    "fields": {
+      "instrument_serial": "SC-77120",
+      "calibration_date": "2026-05-02",
+      "next_due": "2027-05-02",
+      "result": "pass",
+      "certificate_number": "CAL-2026-0501",
+      "instrument_description": "Bench scale"
+    }
+  },
+  {
+    "file": "calibration_cert_metal_detector.pdf",
+    "doc_type": "calibration_cert",
+    "fields": {
+      "instrument_serial": "MD-5521",
+      "calibration_date": "2026-06-11",
+      "next_due": "2027-06-11",
+      "result": "pass",
+      "certificate_number": "CAL-2026-0533",
+      "instrument_description": "Metal detector"
+    }
+  },
+  {
+    "file": "coa_duck_breast.pdf",
+    "doc_type": "coa",
+    "fields": {
+      "batch": "B2611-07",
+      "product": "Duck breast fillet",
+      "results": {
+        "Total viable count": "2.2E+03",
+        "Enterobacteriaceae": "<10",
+        "Salmonella": "Not detected"
+      }
+    }
+  },
+  {
+    "file": "coa_duck_breast_b2612.pdf",
+    "doc_type": "coa",
+    "fields": {
+      "batch": "B2612-03",
+      "product": "Duck breast fillet",
+      "results": {
+        "Total viable count": "8.4E+04",
+        "Enterobacteriaceae": "<10",
+        "Salmonella": "Not detected"
+      }
+    }
+  },
+  {
+    "file": "supplier_spec_duck_breast.pdf",
+    "doc_type": "supplier_spec",
+    "fields": {
+      "supplier": "Example Poultry Ltd",
+      "product": "Duck breast fillet",
+      "product_code": "4051234",
+      "shelf_life": "14 days",
+      "storage": "0C to 4C",
+      "allergens": [],
+      "micro_limits": {
+        "Total viable count": "1.0E+05 cfu/g",
+        "Enterobacteriaceae": "1.0E+03 cfu/g",
+        "Salmonella": "Not detected in 25g",
+        "Listeria monocytogenes": "Not detected in 25g"
+      }
+    }
+  },
+  {
+    "file": "supplier_spec_gravy.pdf",
+    "doc_type": "supplier_spec",
+    "fields": {
+      "supplier": "Example Sauces Ltd",
+      "product": "Beef gravy",
+      "shelf_life": "18 months",
+      "storage": "ambient",
+      "allergens": [
+        "celery",
+        "wheat"
+      ]
+    }
+  },
+  {
+    "file": "supplier_spec_sauce.pdf",
+    "doc_type": "supplier_spec",
+    "fields": {
+      "supplier": "Example Sauces Ltd",
+      "product": "Orange sauce",
+      "shelf_life": "12 months",
+      "storage": "ambient",
+      "allergens": [],
+      "micro_limits": {
+        "TVC": "< 1000 cfu/g"
+      }
+    }
+  }
+]

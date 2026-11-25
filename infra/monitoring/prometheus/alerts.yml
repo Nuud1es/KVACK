@@ -1,0 +1,90 @@
+# Alert rules. They show in Prometheus (Status > Rules, Alerts) and on the Grafana dashboard.
+# Nothing is *sent* anywhere until an Alertmanager or a Grafana contact point is added.
+groups:
+  - name: qa-copilot-availability
+    rules:
+      - alert: QACopilotApiDown
+        expr: up{job="qa-copilot"} == 0
+        for: 2m
+        labels: {severity: critical}
+        annotations:
+          summary: The KVACK API cannot be scraped
+          description: Prometheus has not reached the API for 2 minutes. Is the Windows service running, and is its port open to this machine?
+
+      - alert: QACopilotPostgresDown
+        expr: qacopilot_dependency_up{service="postgres"} == 0
+        for: 2m
+        labels: {severity: critical}
+        annotations:
+          summary: The API cannot reach Postgres
+          description: Approvals, the review queue and due-date answers need the database.
+
+      - alert: QACopilotQdrantDown
+        expr: qacopilot_dependency_up{service="qdrant"} == 0
+        for: 2m
+        labels: {severity: critical}
+        annotations:
+          summary: The API cannot reach Qdrant
+          description: Document search is down; Ask falls back to nothing for non-table questions.
+
+      - alert: QACopilotLlmUnreachable
+        expr: qacopilot_dependency_up{service="llm"} == 0
+        for: 5m
+        labels: {severity: warning}
+        annotations:
+          summary: The LLM server is unreachable
+          description: Answers from documents, extraction and reminder intros are failing. Check the Windows PC and its Tailscale connection (infra/check-llm.sh).
+
+      - alert: QACopilotQueueDataStale
+        expr: time() - qacopilot_metrics_refreshed_timestamp_seconds > 300
+        for: 5m
+        labels: {severity: warning}
+        annotations:
+          summary: The queue numbers have not refreshed for 5 minutes
+          description: The API's background refresh is failing (usually a database problem), so the review and approval counts are out of date.
+
+  - name: qa-copilot-quality
+    rules:
+      - alert: QACopilotHighErrorRate
+        expr: |
+          sum(rate(qacopilot_http_requests_total{status=~"5.."}[10m]))
+            / sum(rate(qacopilot_http_requests_total[10m])) > 0.05
+          and sum(rate(qacopilot_http_requests_total[10m])) > 0.02
+        for: 10m
+        labels: {severity: warning}
+        annotations:
+          summary: More than 5% of requests are failing with a server error
+
+      - alert: QACopilotLlmErrors
+        expr: |
+          sum(rate(qacopilot_llm_requests_total{outcome=~"error|unreachable"}[10m]))
+            / sum(rate(qacopilot_llm_requests_total[10m])) > 0.2
+          and sum(rate(qacopilot_llm_requests_total[10m])) > 0.01
+        for: 10m
+        labels: {severity: warning}
+        annotations:
+          summary: More than 20% of LLM calls are failing
+
+  - name: qa-copilot-work-waiting
+    rules:
+      - alert: QACopilotApprovalWaitingTooLong
+        expr: qacopilot_agent_oldest_awaiting_approval_seconds > 86400
+        labels: {severity: warning}
+        annotations:
+          summary: A drafted action has waited more than a day for approval
+          description: Open the Approvals page; nothing is sent until a person approves or rejects it.
+
+      - alert: QACopilotReviewBacklog
+        expr: qacopilot_certificates_needing_review > 25
+        for: 1h
+        labels: {severity: info}
+        annotations:
+          summary: More than 25 certificate readings are waiting for review
+          description: Unverified readings are marked as such in answers and reminders until a person confirms them.
+
+      - alert: QACopilotOverdueCertificates
+        expr: qacopilot_certificates_overdue > 0
+        for: 1h
+        labels: {severity: warning}
+        annotations:
+          summary: "{{ $value }} calibration certificate(s) are overdue"

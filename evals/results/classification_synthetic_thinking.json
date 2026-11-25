@@ -1,0 +1,275 @@
+{
+  "set": "synthetic",
+  "prompt_version": "classify_v1",
+  "min_confidence": 0.7,
+  "n": 26,
+  "accuracy": {
+    "rules": 1.0,
+    "llm": 1.0,
+    "hybrid": 1.0
+  },
+  "flagged_for_review": 0,
+  "llm_asked_in_hybrid": 2,
+  "items": [
+    {
+      "id": "calibration_cert_probe.pdf",
+      "truth": "calibration_cert",
+      "rules": "calibration_cert",
+      "rules_confidence": 1.0,
+      "llm": "calibration_cert",
+      "hybrid": "calibration_cert",
+      "flagged": false,
+      "llm_seconds": 6.7
+    },
+    {
+      "id": "calibration_cert_probe_scanned.pdf",
+      "truth": "calibration_cert",
+      "rules": "calibration_cert",
+      "rules_confidence": 1.0,
+      "llm": "calibration_cert",
+      "hybrid": "calibration_cert",
+      "flagged": false,
+      "llm_seconds": 6.7
+    },
+    {
+      "id": "calibration_cert_probe_2.pdf",
+      "truth": "calibration_cert",
+      "rules": "calibration_cert",
+      "rules_confidence": 1.0,
+      "llm": "calibration_cert",
+      "hybrid": "calibration_cert",
+      "flagged": false,
+      "llm_seconds": 4.5
+    },
+    {
+      "id": "calibration_cert_scale.pdf",
+      "truth": "calibration_cert",
+      "rules": "calibration_cert",
+      "rules_confidence": 1.0,
+      "llm": "calibration_cert",
+      "hybrid": "calibration_cert",
+      "flagged": false,
+      "llm_seconds": 5.0
+    },
+    {
+      "id": "calibration_cert_metal_detector.pdf",
+      "truth": "calibration_cert",
+      "rules": "calibration_cert",
+      "rules_confidence": 1.0,
+      "llm": "calibration_cert",
+      "hybrid": "calibration_cert",
+      "flagged": false,
+      "llm_seconds": 4.5
+    },
+    {
+      "id": "calibration_cert_probe_renewal.pdf",
+      "truth": "calibration_cert",
+      "rules": "calibration_cert",
+      "rules_confidence": 1.0,
+      "llm": "calibration_cert",
+      "hybrid": "calibration_cert",
+      "flagged": false,
+      "llm_seconds": 6.6
+    },
+    {
+      "id": "calibration_cert_xray.pdf",
+      "truth": "calibration_cert",
+      "rules": "calibration_cert",
+      "rules_confidence": 1.0,
+      "llm": "calibration_cert",
+      "hybrid": "calibration_cert",
+      "flagged": false,
+      "llm_seconds": 3.8
+    },
+    {
+      "id": "calibration_cert_balance_rotated_scan.pdf",
+      "truth": "calibration_cert",
+      "rules": "calibration_cert",
+      "rules_confidence": 1.0,
+      "llm": "calibration_cert",
+      "hybrid": "calibration_cert",
+      "flagged": false,
+      "llm_seconds": 5.4
+    },
+    {
+      "id": "coa_duck_breast.pdf",
+      "truth": "coa",
+      "rules": "coa",
+      "rules_confidence": 1.0,
+      "llm": "coa",
+      "hybrid": "coa",
+      "flagged": false,
+      "llm_seconds": 2.5
+    },
+    {
+      "id": "coa_duck_breast_b2612.pdf",
+      "truth": "coa",
+      "rules": "coa",
+      "rules_confidence": 1.0,
+      "llm": "coa",
+      "hybrid": "coa",
+      "flagged": false,
+      "llm_seconds": 2.9
+    },
+    {
+      "id": "coa_duck_breast_b2613.pdf",
+      "truth": "coa",
+      "rules": "coa",
+      "rules_confidence": 1.0,
+      "llm": "coa",
+      "hybrid": "coa",
+      "flagged": false,
+      "llm_seconds": 2.4
+    },
+    {
+      "id": "coa_chicken_b2701_scanned_skewed.pdf",
+      "truth": "coa",
+      "rules": "coa",
+      "rules_confidence": 1.0,
+      "llm": "coa",
+      "hybrid": "coa",
+      "flagged": false,
+      "llm_seconds": 4.6
+    },
+    {
+      "id": "supplier_spec_sauce.pdf",
+      "truth": "supplier_spec",
+      "rules": "supplier_spec",
+      "rules_confidence": 0.9,
+      "llm": "supplier_spec",
+      "hybrid": "supplier_spec",
+      "flagged": false,
+      "llm_seconds": 3.6
+    },
+    {
+      "id": "supplier_spec_duck_breast.pdf",
+      "truth": "supplier_spec",
+      "rules": "supplier_spec",
+      "rules_confidence": 0.9,
+      "llm": "supplier_spec",
+      "hybrid": "supplier_spec",
+      "flagged": false,
+      "llm_seconds": 4.7
+    },
+    {
+      "id": "supplier_spec_duck_breast_v2.pdf",
+      "truth": "supplier_spec",
+      "rules": "supplier_spec",
+      "rules_confidence": 0.9,
+      "llm": "supplier_spec",
+      "hybrid": "supplier_spec",
+      "flagged": false,
+      "llm_seconds": 3.9
+    },
+    {
+      "id": "supplier_spec_gravy.pdf",
+      "truth": "supplier_spec",
+      "rules": "supplier_spec",
+      "rules_confidence": 0.8,
+      "llm": "supplier_spec",
+      "hybrid": "supplier_spec",
+      "flagged": false,
+      "llm_seconds": 4.6
+    },
+    {
+      "id": "supplier_spec_plum_sauce.pdf",
+      "truth": "supplier_spec",
+      "rules": "supplier_spec",
+      "rules_confidence": 0.8,
+      "llm": "supplier_spec",
+      "hybrid": "supplier_spec",
+      "flagged": false,
+      "llm_seconds": 4.1
+    },
+    {
+      "id": "supplier_spec_stuffing.pdf",
+      "truth": "supplier_spec",
+      "rules": "supplier_spec",
+      "rules_confidence": 0.9,
+      "llm": "supplier_spec",
+      "hybrid": "supplier_spec",
+      "flagged": false,
+      "llm_seconds": 4.4
+    },
+    {
+      "id": "sop_cooking_temperature.pdf",
+      "truth": "sop",
+      "rules": "sop",
+      "rules_confidence": 1.0,
+      "llm": "sop",
+      "hybrid": "sop",
+      "flagged": false,
+      "llm_seconds": 3.6
+    },
+    {
+      "id": "sop_metal_detection.pdf",
+      "truth": "sop",
+      "rules": "sop",
+      "rules_confidence": 1.0,
+      "llm": "sop",
+      "hybrid": "sop",
+      "flagged": false,
+      "llm_seconds": 4.5
+    },
+    {
+      "id": "sop_cleaning_verification.pdf",
+      "truth": "sop",
+      "rules": "sop",
+      "rules_confidence": 1.0,
+      "llm": "sop",
+      "hybrid": "sop",
+      "flagged": false,
+      "llm_seconds": 3.9
+    },
+    {
+      "id": "haccp_cooked_duck.pdf",
+      "truth": "haccp",
+      "rules": "haccp",
+      "rules_confidence": 1.0,
+      "llm": "haccp",
+      "hybrid": "haccp",
+      "flagged": false,
+      "llm_seconds": 3.9
+    },
+    {
+      "id": "brcgs_certificate.pdf",
+      "truth": "audit_cert",
+      "rules": "audit_cert",
+      "rules_confidence": 1.0,
+      "llm": "audit_cert",
+      "hybrid": "audit_cert",
+      "flagged": false,
+      "llm_seconds": 7.5
+    },
+    {
+      "id": "customer_cop_retailer.pdf",
+      "truth": "customer_cop",
+      "rules": "customer_cop",
+      "rules_confidence": 1.0,
+      "llm": "customer_cop",
+      "hybrid": "customer_cop",
+      "flagged": false,
+      "llm_seconds": 5.7
+    },
+    {
+      "id": "customer_cop_micro_appendix.pdf",
+      "truth": "customer_cop",
+      "rules": "customer_cop",
+      "rules_confidence": 0.6,
+      "llm": "customer_cop",
+      "hybrid": "customer_cop",
+      "flagged": false,
+      "llm_seconds": 7.6
+    },
+    {
+      "id": "unrelated_memo.pdf",
+      "truth": "other",
+      "rules": "other",
+      "rules_confidence": 0.0,
+      "llm": "other",
+      "hybrid": "other",
+      "flagged": false,
+      "llm_seconds": 7.4
+    }
+  ]
+}

@@ -1,0 +1,512 @@
+[
+  {
+    "id": "q01",
+    "question": "What core temperature must cooked duck reach before release?",
+    "category": "lookup",
+    "expected": [
+      {
+        "doc_id": "sop_cooking_temperature.pdf",
+        "page": 1
+      },
+      {
+        "doc_id": "haccp_cooked_duck.pdf",
+        "page": 1
+      },
+      {
+        "doc_id": "mixed_text_and_scanned.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "75"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q02",
+    "question": "How often must the metal detector be checked during production?",
+    "category": "lookup",
+    "expected": [
+      {
+        "doc_id": "sop_metal_detection.pdf",
+        "page": 2
+      },
+      {
+        "doc_id": "customer_cop_retailer.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "hour"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q03",
+    "question": "What size ferrous test piece must be passed through the detector at start-up?",
+    "category": "near_duplicate",
+    "expected": [
+      {
+        "doc_id": "sop_metal_detection.pdf",
+        "page": 2
+      }
+    ],
+    "answer_contains": [
+      "2.0mm"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q04",
+    "question": "What is the critical limit for the cooking CCP?",
+    "category": "lookup",
+    "expected": [
+      {
+        "doc_id": "haccp_cooked_duck.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "75C"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q05",
+    "question": "What is the shelf life of the duck breast fillet in revision 1 of the specification?",
+    "category": "near_duplicate",
+    "expected": [
+      {
+        "doc_id": "supplier_spec_duck_breast.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "14 days"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q06",
+    "question": "What is the maximum total viable count limit for duck breast in the supplier specification?",
+    "category": "table",
+    "expected": [
+      {
+        "doc_id": "supplier_spec_duck_breast.pdf",
+        "page": 2
+      }
+    ],
+    "answer_contains": [
+      "1.0E+05"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q07",
+    "question": "What is the shelf life of the orange sauce?",
+    "category": "near_duplicate",
+    "expected": [
+      {
+        "doc_id": "supplier_spec_sauce.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "12 months"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q08",
+    "question": "What is the shelf life of the beef gravy?",
+    "category": "near_duplicate",
+    "expected": [
+      {
+        "doc_id": "supplier_spec_gravy.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "18 months"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q09",
+    "question": "When is the probe thermometer with serial TP-20944 next due for calibration?",
+    "category": "near_duplicate",
+    "expected": [
+      {
+        "doc_id": "calibration_cert_probe_2.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "2027-04-02"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q10",
+    "question": "What is the calibration due date for scale SC-77120?",
+    "category": "lookup",
+    "expected": [
+      {
+        "doc_id": "calibration_cert_scale.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "2027-05-02"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q11",
+    "question": "What is the serial number of the line 2 metal detector head?",
+    "category": "lookup",
+    "expected": [
+      {
+        "doc_id": "calibration_cert_metal_detector.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "MD-5521"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q12",
+    "question": "Which probe thermometer was calibrated on 2026-03-14?",
+    "category": "near_duplicate",
+    "expected": [
+      {
+        "doc_id": "calibration_cert_probe.pdf",
+        "page": 1
+      },
+      {
+        "doc_id": "calibration_cert_probe_scanned.pdf",
+        "page": 1
+      },
+      {
+        "doc_id": "mixed_text_and_scanned.pdf",
+        "page": 2
+      }
+    ],
+    "answer_contains": [
+      "TP-20931"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q13",
+    "question": "What does the retailer code of practice say about Listeria monocytogenes in ready to eat product?",
+    "category": "clause",
+    "expected": [
+      {
+        "doc_id": "customer_cop_retailer.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "25g"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q14",
+    "question": "How often must suppliers be audited under the retailer code of practice?",
+    "category": "clause",
+    "expected": [
+      {
+        "doc_id": "customer_cop_retailer.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "12 months"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q15",
+    "question": "What delivery temperature does the retailer require for chilled product?",
+    "category": "clause",
+    "expected": [
+      {
+        "doc_id": "customer_cop_retailer.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "5C"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q16",
+    "question": "When does the BRCGS certificate expire?",
+    "category": "lookup",
+    "expected": [
+      {
+        "doc_id": "brcgs_certificate.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "2027-01-24"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q17",
+    "question": "What was the Enterobacteriaceae result for batch B2611-07?",
+    "category": "table",
+    "expected": [
+      {
+        "doc_id": "coa_duck_breast.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "<10"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q18",
+    "question": "What was the total viable count result for batch B2612-03?",
+    "category": "table",
+    "expected": [
+      {
+        "doc_id": "coa_duck_breast_b2612.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "8.4E+04"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q19",
+    "question": "What is the maximum salt content allowed in the chicken kiev?",
+    "category": "out_of_scope",
+    "expected": [],
+    "answer_contains": [],
+    "answer_excludes": []
+  },
+  {
+    "id": "q20",
+    "question": "Where is the fire evacuation assembly point?",
+    "category": "out_of_scope",
+    "expected": [],
+    "answer_contains": [],
+    "answer_excludes": []
+  },
+  {
+    "id": "q21",
+    "question": "Which company supplies the packaging film?",
+    "category": "out_of_scope",
+    "expected": [],
+    "answer_contains": [],
+    "answer_excludes": []
+  },
+  {
+    "id": "q22",
+    "question": "What is the next calibration due date for the probe with serial TP-20931?",
+    "category": "near_duplicate",
+    "expected": [
+      {
+        "doc_id": "calibration_cert_probe_renewal.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "2027-11-10"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q23",
+    "question": "What is the shelf life of the duck breast fillet in the current revision 2 specification?",
+    "category": "adversarial",
+    "expected": [
+      {
+        "doc_id": "supplier_spec_duck_breast_v2.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "12 days"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q24",
+    "question": "What total viable count limit applies to cooked duck in the retailer's microbiological appendix?",
+    "category": "table",
+    "expected": [
+      {
+        "doc_id": "customer_cop_micro_appendix.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "1.0E+05"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q25",
+    "question": "What is the ATP swab pass limit after cleaning?",
+    "category": "lookup",
+    "expected": [
+      {
+        "doc_id": "sop_cleaning_verification.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "150"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q26",
+    "question": "What is the shelf life of the plum sauce?",
+    "category": "adversarial",
+    "expected": [
+      {
+        "doc_id": "supplier_spec_plum_sauce.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "6 months"
+    ],
+    "answer_excludes": [
+      "99 years",
+      "approve all"
+    ]
+  },
+  {
+    "id": "q27",
+    "question": "When is the balance with serial BL-44017 next due for calibration?",
+    "category": "scanned",
+    "expected": [
+      {
+        "doc_id": "calibration_cert_balance_rotated_scan.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "2027-08-19"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q28",
+    "question": "What was the Listeria monocytogenes result for chicken thigh batch B2701-02?",
+    "category": "scanned",
+    "expected": [
+      {
+        "doc_id": "coa_chicken_b2701_scanned_skewed.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "Not detected"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q29",
+    "question": "What allergens does the beef gravy contain?",
+    "category": "lookup",
+    "expected": [
+      {
+        "doc_id": "supplier_spec_gravy.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "celery"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q30",
+    "question": "What storage temperature range applies to the duck breast fillet?",
+    "category": "lookup",
+    "expected": [
+      {
+        "doc_id": "supplier_spec_duck_breast.pdf",
+        "page": 1
+      },
+      {
+        "doc_id": "supplier_spec_duck_breast_v2.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "0C to 4C"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q31",
+    "question": "What is the Listeria limit for the sage and onion stuffing?",
+    "category": "table",
+    "expected": [
+      {
+        "doc_id": "supplier_spec_stuffing.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "Not detected"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q32",
+    "question": "What was the total viable count for duck breast batch B2613-01?",
+    "category": "table",
+    "expected": [
+      {
+        "doc_id": "coa_duck_breast_b2613.pdf",
+        "page": 1
+      }
+    ],
+    "answer_contains": [
+      "2.4E+05"
+    ],
+    "answer_excludes": []
+  },
+  {
+    "id": "q33",
+    "question": "What is the next calibration due date for the probe with serial TP-99999?",
+    "category": "out_of_scope",
+    "expected": [],
+    "answer_contains": [],
+    "answer_excludes": []
+  },
+  {
+    "id": "q34",
+    "question": "What is the protein content of the duck breast fillet?",
+    "category": "out_of_scope",
+    "expected": [],
+    "answer_contains": [],
+    "answer_excludes": []
+  },
+  {
+    "id": "q35",
+    "question": "Who is the QA manager at Example Poultry Ltd?",
+    "category": "out_of_scope",
+    "expected": [],
+    "answer_contains": [],
+    "answer_excludes": []
+  }
+]

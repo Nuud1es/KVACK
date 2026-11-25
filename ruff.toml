@@ -1,0 +1,11 @@
+# Applies to evals/ and data/ (the packages have their own [tool.ruff] in pyproject.toml).
+# Without this, ruff walks up to the toolkit's pyproject.toml and applies its rules here.
+line-length = 100
+target-version = "py311"
+
+[lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[lint.per-file-ignores]
+# document text in the sample generator is data, not code
+"data/samples/make_samples.py" = ["E501"]

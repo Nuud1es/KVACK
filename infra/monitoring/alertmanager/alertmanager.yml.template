@@ -1,0 +1,13 @@
+# Template: ../../setup-monitoring.sh fills in __NTFY_WEBHOOK__ and writes alertmanager.yml.
+# Alerts are sent to an ntfy topic; subscribe to it in a browser or the ntfy phone app.
+route:
+  receiver: ntfy
+  group_by: [alertname]
+  group_wait: 30s        # wait a little so alerts that start together arrive as one message
+  group_interval: 5m
+  repeat_interval: 4h    # a problem that is still there is repeated every 4 hours
+receivers:
+  - name: ntfy
+    webhook_configs:
+      - url: "__NTFY_WEBHOOK__"
+        send_resolved: true   # also say when it has cleared

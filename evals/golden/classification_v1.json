@@ -1,0 +1,106 @@
+[
+  {
+    "file": "calibration_cert_probe.pdf",
+    "doc_type": "calibration_cert"
+  },
+  {
+    "file": "calibration_cert_probe_scanned.pdf",
+    "doc_type": "calibration_cert"
+  },
+  {
+    "file": "calibration_cert_probe_2.pdf",
+    "doc_type": "calibration_cert"
+  },
+  {
+    "file": "calibration_cert_scale.pdf",
+    "doc_type": "calibration_cert"
+  },
+  {
+    "file": "calibration_cert_metal_detector.pdf",
+    "doc_type": "calibration_cert"
+  },
+  {
+    "file": "calibration_cert_probe_renewal.pdf",
+    "doc_type": "calibration_cert"
+  },
+  {
+    "file": "calibration_cert_xray.pdf",
+    "doc_type": "calibration_cert"
+  },
+  {
+    "file": "calibration_cert_balance_rotated_scan.pdf",
+    "doc_type": "calibration_cert"
+  },
+  {
+    "file": "coa_duck_breast.pdf",
+    "doc_type": "coa"
+  },
+  {
+    "file": "coa_duck_breast_b2612.pdf",
+    "doc_type": "coa"
+  },
+  {
+    "file": "coa_duck_breast_b2613.pdf",
+    "doc_type": "coa"
+  },
+  {
+    "file": "coa_chicken_b2701_scanned_skewed.pdf",
+    "doc_type": "coa"
+  },
+  {
+    "file": "supplier_spec_sauce.pdf",
+    "doc_type": "supplier_spec"
+  },
+  {
+    "file": "supplier_spec_duck_breast.pdf",
+    "doc_type": "supplier_spec"
+  },
+  {
+    "file": "supplier_spec_duck_breast_v2.pdf",
+    "doc_type": "supplier_spec"
+  },
+  {
+    "file": "supplier_spec_gravy.pdf",
+    "doc_type": "supplier_spec"
+  },
+  {
+    "file": "supplier_spec_plum_sauce.pdf",
+    "doc_type": "supplier_spec"
+  },
+  {
+    "file": "supplier_spec_stuffing.pdf",
+    "doc_type": "supplier_spec"
+  },
+  {
+    "file": "sop_cooking_temperature.pdf",
+    "doc_type": "sop"
+  },
+  {
+    "file": "sop_metal_detection.pdf",
+    "doc_type": "sop"
+  },
+  {
+    "file": "sop_cleaning_verification.pdf",
+    "doc_type": "sop"
+  },
+  {
+    "file": "haccp_cooked_duck.pdf",
+    "doc_type": "haccp"
+  },
+  {
+    "file": "brcgs_certificate.pdf",
+    "doc_type": "audit_cert"
+  },
+  {
+    "file": "customer_cop_retailer.pdf",
+    "doc_type": "customer_cop"
+  },
+  {
+    "file": "customer_cop_micro_appendix.pdf",
+    "doc_type": "customer_cop"
+  },
+  {
+    "file": "unrelated_memo.pdf",
+    "doc_type": "other"
+  }
+]

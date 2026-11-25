@@ -1,0 +1,190 @@
+{
+  "judge_prompt_version": "judge_v1",
+  "judge_model": "Darkstar-Nemotron-3.5-Lightning-30B-A3B-Abliterated-BF16.i1-IQ4_XS",
+  "answers": "v3",
+  "summary": {
+    "n_judged": 25,
+    "n_judge_errors": 0,
+    "faithfulness": 0.96,
+    "relevance": 1.0
+  },
+  "items": [
+    {
+      "id": "q01",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q02",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q03",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q04",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q05",
+      "faithful": false,
+      "relevant": true,
+      "unsupported": [
+        "The shelf life of the duck breast fillet in revision 1 is 14 days from pack date."
+      ],
+      "error": null
+    },
+    {
+      "id": "q06",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q07",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q08",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q11",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q12",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q13",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q14",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q15",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q16",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q17",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q18",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q23",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q24",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q25",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q26",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q28",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q29",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q30",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q31",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    },
+    {
+      "id": "q32",
+      "faithful": true,
+      "relevant": true,
+      "unsupported": [],
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "name": "baseline_v2",
+  "summary": {
+    "n_in_scope": 29,
+    "doc_hit@1": 0.862,
+    "doc_hit@3": 0.966,
+    "doc_hit@5": 1.0,
+    "page_hit@1": 0.862,
+    "page_hit@3": 0.966,
+    "mrr": 0.917,
+    "by_category": {
+      "adversarial": {
+        "n": 2,
+        "doc_hit@1": 1.0,
+        "doc_hit@3": 1.0,
+        "doc_hit@5": 1.0,
+        "page_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "mrr": 1.0
+      },
+      "clause": {
+        "n": 3,
+        "doc_hit@1": 1.0,
+        "doc_hit@3": 1.0,
+        "doc_hit@5": 1.0,
+        "page_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "mrr": 1.0
+      },
+      "lookup": {
+        "n": 9,
+        "doc_hit@1": 1.0,
+        "doc_hit@3": 1.0,
+        "doc_hit@5": 1.0,
+        "page_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "mrr": 1.0
+      },
+      "near_duplicate": {
+        "n": 7,
+        "doc_hit@1": 0.571,
+        "doc_hit@3": 0.857,
+        "doc_hit@5": 1.0,
+        "page_hit@1": 0.571,
+        "page_hit@3": 0.857,
+        "mrr": 0.726
+      },
+      "scanned": {
+        "n": 2,
+        "doc_hit@1": 1.0,
+        "doc_hit@3": 1.0,
+        "doc_hit@5": 1.0,
+        "page_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "mrr": 1.0
+      },
+      "table": {
+        "n": 6,
+        "doc_hit@1": 0.833,
+        "doc_hit@3": 1.0,
+        "doc_hit@5": 1.0,
+        "page_hit@1": 0.833,
+        "page_hit@3": 1.0,
+        "mrr": 0.917
+      }
+    },
+    "out_of_scope": {
+      "n": 6,
+      "top_scores": [
+        0.5,
+        0.625,
+        0.667,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "in_scope_top_scores_min": 0.7
+    }
+  },
+  "items": [
+    {
+      "id": "q01",
+      "category": "lookup",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "mixed_text_and_scanned.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q02",
+      "category": "lookup",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "sop_metal_detection.pdf",
+      "top_score": 0.8333334
+    },
+    {
+      "id": "q03",
+      "category": "near_duplicate",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "sop_metal_detection.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q04",
+      "category": "lookup",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "haccp_cooked_duck.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q05",
+      "category": "near_duplicate",
+      "doc_rank": 4,
+      "page_rank": 4,
+      "top_doc": "supplier_spec_duck_breast_v2.pdf",
+      "top_score": 0.8333334
+    },
+    {
+      "id": "q06",
+      "category": "table",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "supplier_spec_duck_breast.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q07",
+      "category": "near_duplicate",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "supplier_spec_sauce.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q08",
+      "category": "near_duplicate",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "supplier_spec_gravy.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q09",
+      "category": "near_duplicate",
+      "doc_rank": 2,
+      "page_rank": 2,
+      "top_doc": "calibration_cert_probe_scanned.pdf",
+      "top_score": 0.7
+    },
+    {
+      "id": "q10",
+      "category": "lookup",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "calibration_cert_scale.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q11",
+      "category": "lookup",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "calibration_cert_metal_detector.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q12",
+      "category": "near_duplicate",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "calibration_cert_probe_scanned.pdf",
+      "top_score": 0.8333334
+    },
+    {
+      "id": "q13",
+      "category": "clause",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "customer_cop_retailer.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q14",
+      "category": "clause",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "customer_cop_retailer.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q15",
+      "category": "clause",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "customer_cop_retailer.pdf",
+      "top_score": 0.8333334
+    },
+    {
+      "id": "q16",
+      "category": "lookup",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "brcgs_certificate.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q17",
+      "category": "table",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "coa_duck_breast.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q18",
+      "category": "table",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "coa_duck_breast_b2612.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q19",
+      "category": "out_of_scope",
+      "doc_rank": null,
+      "page_rank": null,
+      "top_doc": "coa_chicken_b2701_scanned_skewed.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q20",
+      "category": "out_of_scope",
+      "doc_rank": null,
+      "page_rank": null,
+      "top_doc": "sop_metal_detection.pdf",
+      "top_score": 0.5
+    },
+    {
+      "id": "q21",
+      "category": "out_of_scope",
+      "doc_rank": null,
+      "page_rank": null,
+      "top_doc": "supplier_spec_sauce.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q22",
+      "category": "near_duplicate",
+      "doc_rank": 3,
+      "page_rank": 3,
+      "top_doc": "calibration_cert_probe_scanned.pdf",
+      "top_score": 0.8333334
+    },
+    {
+      "id": "q23",
+      "category": "adversarial",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "supplier_spec_duck_breast_v2.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q24",
+      "category": "table",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "customer_cop_micro_appendix.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q25",
+      "category": "lookup",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "sop_cleaning_verification.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q26",
+      "category": "adversarial",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "supplier_spec_plum_sauce.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q27",
+      "category": "scanned",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "calibration_cert_balance_rotated_scan.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q28",
+      "category": "scanned",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "coa_chicken_b2701_scanned_skewed.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q29",
+      "category": "lookup",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "supplier_spec_gravy.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q30",
+      "category": "lookup",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "supplier_spec_duck_breast.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q31",
+      "category": "table",
+      "doc_rank": 1,
+      "page_rank": 1,
+      "top_doc": "supplier_spec_stuffing.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q32",
+      "category": "table",
+      "doc_rank": 2,
+      "page_rank": 2,
+      "top_doc": "coa_duck_breast_b2612.pdf",
+      "top_score": 0.8333334
+    },
+    {
+      "id": "q33",
+      "category": "out_of_scope",
+      "doc_rank": null,
+      "page_rank": null,
+      "top_doc": "calibration_cert_probe_scanned.pdf",
+      "top_score": 1.0
+    },
+    {
+      "id": "q34",
+      "category": "out_of_scope",
+      "doc_rank": null,
+      "page_rank": null,
+      "top_doc": "supplier_spec_duck_breast.pdf",
+      "top_score": 0.625
+    },
+    {
+      "id": "q35",
+      "category": "out_of_scope",
+      "doc_rank": null,
+      "page_rank": null,
+      "top_doc": "supplier_spec_duck_breast.pdf",
+      "top_score": 0.6666667
+    }
+  ]
+}

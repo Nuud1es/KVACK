@@ -1,0 +1,54 @@
+# Prometheus + Alertmanager + Grafana for KVACK. Run on the Linux machine (via ../setup-monitoring.sh).
+# The API runs elsewhere (Windows); Prometheus scrapes its /metrics, Grafana draws it.
+name: qacopilot-monitoring
+
+services:
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.retention.time=30d
+    ports: ["127.0.0.1:9092:9090"] # 9090/9091 are taken by Langfuse's MinIO; local only
+    volumes:
+      - ./prometheus:/etc/prometheus:ro
+      - prometheus-data:/prometheus
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # lets a locally running API be scraped for testing
+    restart: unless-stopped
+
+  alertmanager:
+    image: prom/alertmanager:v0.27.0
+    # Host network so it can reach an ntfy that listens on this machine only (127.0.0.1); it
+    # listens on the Docker bridge address, which Prometheus reaches but the LAN does not.
+    network_mode: host
+    command:
+      - --config.file=/etc/alertmanager/alertmanager.yml
+      - --web.listen-address=172.17.0.1:9093
+      - --cluster.listen-address=
+    volumes:
+      - ./alertmanager:/etc/alertmanager:ro
+      - alertmanager-data:/alertmanager
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana-oss:11.3.1
+    ports: ["3001:3000"] # 3000 is Langfuse
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:?run ../setup-monitoring.sh first}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+      GF_ANALYTICS_CHECK_FOR_UPDATES: "false"
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /var/lib/grafana/dashboards/qa-copilot.json
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+    depends_on: [prometheus]
+    restart: unless-stopped
+
+volumes:
+  alertmanager-data:
+  prometheus-data:
+  grafana-data:
