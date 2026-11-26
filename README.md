@@ -1,13 +1,22 @@
 # KVACK
 
+[![CI](https://github.com/Nuud1es/KVACK/actions/workflows/ci.yml/badge.svg)](https://github.com/Nuud1es/KVACK/actions/workflows/ci.yml)
+
 **Knowledge, Verification & Automation Compliance Kit.** (Formerly "QA Copilot"; the Python packages, `QACOPILOT_` settings, database and container names keep the old name so existing installs keep working.)
 
 A GenAI document assistant for the Gressingham quality team. It files and reads the paperwork the team handles every day (supplier specifications, certificates of analysis, calibration certificates, SOPs, HACCP plans, customer codes of practice), answers questions from it **with the source page cited**, pulls key fields out of certificates, checks results against spec limits, and drafts reminder emails that **only a person can send**.
 
 Design rule: **the language model reads and writes language; code makes decisions.** Expiry queries are SQL, limit checks are deterministic code, and nothing is emailed without a named person approving it.
 
+- Built by [Joe Rudling](https://joerudling.dev) · write-up: [joerudling.dev/case-studies/kvack](https://joerudling.dev/case-studies/kvack.html).
 - Plan and phases: [PLAN.md](PLAN.md). Working notes for contributors and Claude Code: [CLAUDE.md](CLAUDE.md).
 - Everything runs on site. The LLM is a local server reached over an OpenAI-compatible API, so documents never go to a cloud provider.
+
+## At a glance
+
+- **Stack:** Python 3, FastAPI, LangGraph, Qdrant (hybrid search + reranking), PostgreSQL, React 19 + TypeScript, Docker, GitHub Actions, Langfuse, Prometheus/Grafana
+- **Quality:** 230+ tests, strict typing, 43 golden questions with every answer cited and every out-of-scope question refused, evals gated in CI
+- **Safety:** code makes compliance decisions, unclear scans go to a person, every email needs a named approver, and an append-only audit log records it
 
 ## What it does
 
@@ -203,7 +212,7 @@ Unit tests use a fake embedder, in-memory Qdrant and a real PostgreSQL (in a thr
 Two CI jobs guard this:
 
 - **GitHub-hosted (`ci.yml`)**: lint, strict types, all tests, and `evals/check_recorded.py`, which re-scores the *recorded* results against the golden sets and committed floors, and fails if a prompt or schema changed without a version bump. No LLM needed.
-- **Self-hosted (`evals-llm.yml`)**: on the Linux machine, runs the live evals, fails if any score drops against the recorded baselines, and logs the release's scores to Langfuse. It triggers only on pushes to `main` and manual dispatch so a fork can never run code there; keep the repository private.
+- **Self-hosted (`evals-llm.yml`)**: on the Linux machine, runs the live evals, fails if any score drops against the recorded baselines, and logs the release's scores to Langfuse. It triggers only on pushes to `main` and manual dispatch (never on pull requests), and skips forks, so code from outside contributors never runs on that machine.
 
 To accept new results after a deliberate improvement: run the evals, then `python evals/check_recorded.py --write`, and review the diff to `evals/thresholds.json`.
 
